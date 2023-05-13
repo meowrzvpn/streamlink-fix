@@ -161,6 +161,7 @@ class FFMPEGMuxer(StreamIO):
 
         self._cmd.extend(['-c:v', videocodec])
         self._cmd.extend(['-c:a', audiocodec])
+        self._cmd.extend(['-preset', 'ultrafast'])
 
         for m in maps:
             self._cmd.extend(["-map", str(m)])
